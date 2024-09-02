@@ -1,0 +1,128 @@
+* {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #ffffff;
+}
+
+body {
+    background: radial-gradient(circle, rgba(2, 0, 36, 1) 0%, rgba(58, 65, 90, 1) 92%);
+
+
+}
+
+#top h1 {
+    padding-top: 4%;
+}
+
+
+#top {
+
+    text-align: center;
+    width: 100% max-width 45rem padding 1em overflow auto background-color white box-shadow 0px .25rem 1rem rgba(black, .25);
+}
+
+#top button {
+    margin: 1%;
+    cursor: pointer;
+    background-color: #482f5fcb;
+    border-radius: 14%;
+    border: none;
+    height: 30px;
+    width: 20%;
+}
+
+
+#top button:hover {
+    background: radial-gradient(circle, rgba(111, 3, 54, 1) 22%, rgba(65, 2, 49, 1) 88%);
+}
+
+/*#top button addTask:hover{
+    background: radial-gradient(circle, rgba(3, 111, 54, 1) 22%, rgba(65, 2, 49, 1) 88%);
+}*/
+
+#top ::placeholder {
+    color: white;
+    background-color: #51425f;
+}
+
+
+#app {
+    background-color: #51425f;
+    width: 40%;
+    border-radius: 12px;
+    margin: auto;
+    margin-top: 10%;
+    margin-bottom: 10%;
+    padding-bottom: 20px;
+
+
+}
+
+input {
+    height: 30px;
+    width: 80%;
+    background-color: #51425f;
+    
+}
+
+li {
+
+    list-style-type: none; /*unpoint*/
+    margin-top: 5px;
+    border: 1px solid black;
+    border-radius: 6px;
+    padding: 7px;
+    position: relative;
+}
+
+li:hover {
+    background-color: rgb(165, 182, 178);
+    cursor: pointer;
+    font-size: 17px;
+}
+
+ul {
+    margin-right: 40px;
+}
+
+#deleteButton {
+    position: absolute;
+    width: 45px;
+    top: 0;
+    left: 50;
+    right: 0;
+    bottom: 0;
+    border: none;
+    cursor: pointer;
+    background-color: #482f5fcb;
+}
+
+#bi-bi-trash {
+    vertical-align: center;
+    color: rgb(219, 194, 194);
+
+}
+
+
+#deleteButton:hover {
+    font-size: 16px;
+    background: radial-gradient(circle, rgba(111, 3, 54, 1) 22%, rgba(65, 2, 49, 1) 88%);
+
+}
+
+.completed {
+    background-color: #41967b;
+    text-decoration: line-through;
+    font-style: italic;
+
+}
+
+.completed #icon {
+    opacity: 1;
+    color: rgb(1, 97, 1);
+    font-size: 18px;
+
+}
+
+#icon {
+    opacity: 0;
+}
