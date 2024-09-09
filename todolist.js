@@ -3,6 +3,7 @@ const app = Vue.createApp({
         return {
             newTask: '',
             tasks: [],
+            searchQuery: '',
         }
     },
     mounted() {
@@ -11,6 +12,14 @@ const app = Vue.createApp({
         }
     },
 
+    computed: {
+        filteredTasks() {
+            if (this.searchQuery.trim() === '') {
+                return this.tasks;
+            }
+            return this.tasks.filter(task => task.text.toLowerCase().includes(this.searchQuery.toLowerCase()));
+        }
+    },
 
     methods: {
         addTask() {

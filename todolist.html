@@ -8,7 +8,7 @@
     <title>To-Do List Application</title>
     <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
-
+    
 </head>
 
 <body>
@@ -19,17 +19,17 @@
             <button @click="addTask" id="addTask">Add Task</button>
             <button @click="deleteAll">Delete All</button>
             <button @click="deleteCompletedTasks">Delete Selected</button>
+            <input v-model="searchQuery" placeholder="Search tasks" maxlength="50" />
         </div>
 
         <div id="li">
             <ul>
-                <li v-for="(task, index) in tasks" :key="index" :class="{'completed': task.completed}"
+                <li v-for="(task, index) in filteredTasks" :key="index" :class="{'completed': task.completed}"
                     @click="completeTask(index)">
                     <i class="bi bi-check" id="icon"></i>
                     <span>{{task.text}}</span>
                     <button id="deleteButton" @click.stop="deleteTask(index)"><i class="bi bi-trash"
                             id="bi-bi-trash"></i></button>
-
                 </li>
             </ul>
         </div>
